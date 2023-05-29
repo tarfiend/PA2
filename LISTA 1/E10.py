@@ -1,8 +1,8 @@
 def mergeSort(lista):
     if len(lista) > 1:
         mid = len(lista) // 2
-        lhs = lista[:mid]
-        rhs = lista[mid:]
+        lhs = lista[:mid] #left hand side
+        rhs = lista[mid:] #right hand side
 
         mergeSort(lhs)
         mergeSort(rhs)
@@ -32,8 +32,8 @@ def mergeSort(lista):
     return lista
 
 def compareLists(lista1, lista2):
-    if mergeSort(lista1) == mergeSort(lista2):
-        return True
+    return (mergeSort(lista1) == mergeSort(lista2))
+
     return False
 
 lista1 = [2, 6, 4, 8, 10, 3]
